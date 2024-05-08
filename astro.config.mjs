@@ -3,8 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: '',
-	base: 'fieldify',
+	site: 'https://fieldifywp.github.io',
+	base: 'docs',
 	integrations: [
 		starlight({
 			title: 'Fieldify Docs',
