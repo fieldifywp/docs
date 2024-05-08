@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://fieldifywp.github.io',
 	integrations: [
@@ -20,15 +19,11 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Getting Started',
-					autogenerate: { directory: 'getting-started' },
-				},
-				{
-					label: 'Reference',
+					label: 'API Reference',
 					autogenerate: { directory: 'reference' },
 				},
 				{
-					label: 'Fields',
+					label: 'Field Types',
 					autogenerate: { directory: 'fields' },
 				},
 			],

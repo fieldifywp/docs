@@ -1,21 +1,78 @@
 ---
-title: Welcome to Fieldify
+title: Fieldify documentation
 description: Get started building your docs site with Fieldify.
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Installation
+
+Fieldify is available as a Composer package. You can install it in your plugin or theme by following these steps:
+
+<Steps>
+    <ol>
+        <li>
+            Require the package with Composer:
+
+            ```
+            composer require fieldify/fields
+            ```
+        </li>
+
+        <li>
+            Require the Composer autoloader in your plugin or theme:
+
+            ```php
+            require_once __DIR__ . 'vendor/autoload.php';
+            ```
+        </li>
+
+        <li>
+            Create a new instance and pass in the path to the main plugin or theme file:
+
+            ```php
+            Fieldify::register( __FILE__ );
+            ```
+        </li>
+    </ol>
+
+</Steps>
+
+Now you can start using Fieldify functions in your plugin or theme!
+
+## Quick links
+
+Here are some quick links to get you started with Fieldify:
 
 <CardGrid>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+    <Card title="Meta boxes" icon="pencil">
+        <p>Learn how to create custom meta boxes with Fieldify.</p>
+        <p><a href="/reference/custom-meta-boxes">Learn more →</a></p>
+    </Card>
+	<Card title="SSR Blocks" icon="add-document">
+		<p>Learn how to create custom blocks with Fieldify.</p>
+        <p><a href="/reference/custom-blocks">Learn more →</a></p>
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Plugin settings" icon="setting">
+		<p>Learn how to create custom plugin settings with Fieldify.</p>
+        <p><a href="/reference/custom-settings">Learn more →</a></p>
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Utility functions" icon="open-book">
+		<p>Learn about the utility functions provided by Fieldify.</p>
+        <p><a href="/reference/utility-functions">Learn more →</a></p>
 	</Card>
 </CardGrid>
+
+## Requirements
+
+Fieldify has a few basic requirements that must be met in order to run properly. These requirements are:
+
+- PHP 7.4 or higher
+- WordPress 6.4 or higher
+
+<Aside
+    title="Note"
+>
+    Fieldify currently only supports the WordPress block editor.
+</Aside>
