@@ -15,8 +15,8 @@ export default defineConfig({
 			customCss: [
 				'./src/styles/custom.css',
 			],
-			components: {
-				SocialIcons: './src/components/SocialIcons.astro',
+			social: {
+				github: 'https://github.com/fieldifywp/fields'
 			},
 			sidebar: [
 				{
