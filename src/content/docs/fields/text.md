@@ -28,3 +28,5 @@ Input type can be provided using the `inputType` key. The default input type is 
 - `time`
 - `password`
 - `file`
+- `hidden`
+
